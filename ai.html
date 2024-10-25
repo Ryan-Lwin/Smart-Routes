@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Image Generator</title>
+  <link rel="stylesheet" href="css/style_ai.css">
+  <link rel="stylesheet" type="text/css" href="./css/style_nav.css">
+  <script src="script_ai.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <header style="background: #10182F; position: relative;">
+    <nav class="navbar">
+        <p class="logo">Smart Routes</p>
+        <ul class="menu-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="service.html">Services</a></li>
+            <li><a href="ai.html">Images</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="location.html">Location</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+        </ul>
+    </nav>
+  </header >
+  <section class="image-generator">
+    <div class="content">
+      <h1>AI Image Generator Tool</h1>
+      <p>Convert your text into an image within a second using this
+        Tool created by Smart Routes Company</p>
+      <form action="#" class="generate-form">
+        <input class="prompt-input" type="text" placeholder="Describe what you want to see" required>
+        <div class="controls">
+          <select class="img-quantity">
+            <option value="1">1 Image</option>
+            <option value="2">2 Images</option>
+            <option value="3">3 Images</option>
+            <option value="4" selected>4 Images</option>
+          </select>
+          <button type="submit" class="generate-btn">Generate</button>
+        </div>
+      </form>
+    </div>
+  </section>
+  <section class="image-gallery">
+    <div class="img-card"><img src="images/main(1).jpeg" alt="image"></div>
+    <div class="img-card"><img src="images/main(2).jpeg" alt="image"></div>
+    <div class="img-card"><img src="images/main(3).jpeg" alt="image"></div>
+    <div class="img-card"><img src="images/main(4).jpeg" alt="image"></div>
+  </section>
+</body>
+</html>

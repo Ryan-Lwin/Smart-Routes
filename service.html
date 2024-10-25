@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Route. </title>
+<link rel="stylesheet" type="text/css" href="./css/style_nav.css">
+<link rel="stylesheet" type="text/css" href="./css/style_bg.css">
+<link rel="stylesheet" type="text/css" href="./css/style_services.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">            
+            <p class="logo">Smart Routes</p>            
+            <ul class="menu-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="service.html">Services</a></li>
+                <li><a href="ai.html">Images</a></li>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="location.html">Location</a></li>
+                <li><a href="contact.html">Contact us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>Check out our services</h1>
+        <div class="selected-option" id="selectedOption"></div>
+        <select id="options">
+            <option value="option1">Futuristic Traffic lights</option>
+            <option value="option2">CCTV system for cars</option>
+            <option value="option3">CCTV for humans</option>
+            <option value="option4">Traffic lights in the past</option>
+        </select>
+        <button onclick="displaySelectedOption()">Check It</button>
+        
+    </div>
+
+
+    <script>
+        function displaySelectedOption() {
+            var selectElement = document.getElementById("options");
+            var selectedOption = selectElement.options[selectElement.selectedIndex].value;
+            var selectedOptionDiv = document.getElementById("selectedOption");
+            
+            var description = "";
+            var imagePath = "";
+            
+            if (selectedOption === "option1") {
+                description = "Smart Traffic Lights are a combination of traditional traffic lights with AI cameras, switches and detection software. They can minimize congestion, improve safety and encourage free flow. They can also regulate traffic patterns and the light patterns by how according the rush hours of morning and evening. During rush hours in the morning where people commute to work, the lights can be more efficiency and quick. Likewise in the evening where people commute back from work. The lights can also vary according to the types of vehicles or their locations. The lights do not switch in the traditional way of Green, Yellow and Red but switches according to the traffic in that area. The cameras have the ability to detect any jams or knots on the road and change the lights according to the problem on the road like a traffic police in a way. Smart Traffic Lights can control vehicle’s traffic. This smart traffic lights system will be paired with solar panels to ensure constant smooth flow of traffic even in in the case of power outages.";
+                imagePath = "images/service_1.png";
+            } else if (selectedOption === "option2") {
+                description = "Detecting cars on the road The AI Detection can detect any illegal or joyriding vehicles report to the police if necessary. It is also easier to detect the car number plates and small details on the car due to Advanced AI components inside.";
+                imagePath = "images/service_2.png";
+            } else if (selectedOption === "option3") {
+                description = "Pedestrians on the road make road accidents more and more common. They can cause distractions for most drivers due to them doing whatever. Pedestrian Detection can detect pedestrians in specific vehicle areas and alarms can be set to warn both the pedestrians and the drivers. Pedestrian detector CCTV can also track and record pedestrians and their actions on the road can be recorded for future reference and authorized reasons.";
+                imagePath = "images/service_3.png";
+            } else if (selectedOption == "option4") {
+                description = "These traffic lights look old in our eyes so, we created something better to help for the future. Traffic lights can contribute to traffic congestion and delays, especially during peak hours, as they impose a rigid control system on vehicle movement. Additionally, they may lead to increased fuel consumption and air pollution due to prolonged idling at red lights. The maintenance and installation costs of traffic lights can also be substantial, posing a financial burden on municipalities.";
+                imagePath = "images/service.png"
+            }
+            
+            var selectedOptionContent = "<img src='" + imagePath + "' alt='Option Image'>";
+            selectedOptionContent += "<p>" + description + "</p>";
+            
+            selectedOptionDiv.innerHTML = selectedOptionContent;
+            selectedOptionDiv.style.display = "block";
+        }
+    </script>
+</body>
+</html>
